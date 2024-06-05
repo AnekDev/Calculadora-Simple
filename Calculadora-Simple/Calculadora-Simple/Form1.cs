@@ -19,15 +19,11 @@ namespace Calculadora_Simple
 
         public Form1()
         {
-
             InitializeComponent();
         }
 
-        private void Resultado_Click(object sender, EventArgs e)
-        {
-           
-        }
-
+        private void Resultado_Click(object sender, EventArgs e) { }
+        
         private void numbers()
         {
             Resultado.Text += $"{i}";
@@ -35,20 +31,24 @@ namespace Calculadora_Simple
 
         private void operations()
         {
-            result = int.Parse(Resultado.Text);
-            Resultado.Text = $"{operation}";
+            try
+            {
+                result = int.Parse(Resultado.Text);
+                Resultado.Text = $"{operation}";
+            }
+            catch { }
         }
 
         private void equal_Click(object sender, EventArgs e)
         {
-            operation = "=";
-
-            secondary = int.Parse(Resultado.Text);
-
-            Resultado.Text = $"{result + secondary}";
+            //operation = "=";
+            try
+            {
+                secondary = int.Parse(Resultado.Text);
+                Resultado.Text = $"{result + secondary}";
+            }
+            catch { }
         }
-
-
         private void number0_Click(object sender, EventArgs e)
         {
             i = 0;

@@ -48,13 +48,14 @@
             // 
             this.Resultado.AutoSize = true;
             this.Resultado.BackColor = System.Drawing.SystemColors.InfoText;
+            this.Resultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Resultado.ForeColor = System.Drawing.SystemColors.Control;
-            this.Resultado.Location = new System.Drawing.Point(80, 100);
+            this.Resultado.Location = new System.Drawing.Point(82, 63);
             this.Resultado.Margin = new System.Windows.Forms.Padding(3);
-            this.Resultado.MaximumSize = new System.Drawing.Size(475, 30);
-            this.Resultado.MinimumSize = new System.Drawing.Size(475, 30);
+            this.Resultado.MaximumSize = new System.Drawing.Size(475, 67);
+            this.Resultado.MinimumSize = new System.Drawing.Size(475, 67);
             this.Resultado.Name = "Resultado";
-            this.Resultado.Size = new System.Drawing.Size(475, 30);
+            this.Resultado.Size = new System.Drawing.Size(475, 67);
             this.Resultado.TabIndex = 0;
             this.Resultado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Resultado.Click += new System.EventHandler(this.Resultado_Click);
@@ -171,7 +172,7 @@
             // 
             // minus
             // 
-            this.minus.Location = new System.Drawing.Point(580, 155);
+            this.minus.Location = new System.Drawing.Point(580, 150);
             this.minus.Name = "minus";
             this.minus.Size = new System.Drawing.Size(77, 67);
             this.minus.TabIndex = 12;
