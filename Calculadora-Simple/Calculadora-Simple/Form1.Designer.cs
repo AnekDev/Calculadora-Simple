@@ -39,21 +39,29 @@
             this.number8 = new System.Windows.Forms.Button();
             this.number9 = new System.Windows.Forms.Button();
             this.number0 = new System.Windows.Forms.Button();
+            this.plus = new System.Windows.Forms.Button();
+            this.minus = new System.Windows.Forms.Button();
+            this.equal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Resultado
             // 
             this.Resultado.AutoSize = true;
-            this.Resultado.Location = new System.Drawing.Point(323, 78);
+            this.Resultado.BackColor = System.Drawing.SystemColors.InfoText;
+            this.Resultado.ForeColor = System.Drawing.SystemColors.Control;
+            this.Resultado.Location = new System.Drawing.Point(80, 100);
+            this.Resultado.Margin = new System.Windows.Forms.Padding(3);
+            this.Resultado.MaximumSize = new System.Drawing.Size(475, 30);
+            this.Resultado.MinimumSize = new System.Drawing.Size(475, 30);
             this.Resultado.Name = "Resultado";
-            this.Resultado.Size = new System.Drawing.Size(14, 16);
+            this.Resultado.Size = new System.Drawing.Size(475, 30);
             this.Resultado.TabIndex = 0;
-            this.Resultado.Text = "0";
+            this.Resultado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Resultado.Click += new System.EventHandler(this.Resultado_Click);
             // 
             // number1
             // 
-            this.number1.Location = new System.Drawing.Point(189, 139);
+            this.number1.Location = new System.Drawing.Point(80, 150);
             this.number1.Name = "number1";
             this.number1.Size = new System.Drawing.Size(77, 67);
             this.number1.TabIndex = 1;
@@ -63,7 +71,7 @@
             // 
             // number2
             // 
-            this.number2.Location = new System.Drawing.Point(289, 139);
+            this.number2.Location = new System.Drawing.Point(180, 150);
             this.number2.Name = "number2";
             this.number2.Size = new System.Drawing.Size(77, 67);
             this.number2.TabIndex = 2;
@@ -73,7 +81,7 @@
             // 
             // number3
             // 
-            this.number3.Location = new System.Drawing.Point(398, 139);
+            this.number3.Location = new System.Drawing.Point(280, 150);
             this.number3.Name = "number3";
             this.number3.Size = new System.Drawing.Size(77, 67);
             this.number3.TabIndex = 3;
@@ -83,7 +91,7 @@
             // 
             // number4
             // 
-            this.number4.Location = new System.Drawing.Point(505, 139);
+            this.number4.Location = new System.Drawing.Point(380, 150);
             this.number4.Name = "number4";
             this.number4.Size = new System.Drawing.Size(77, 67);
             this.number4.TabIndex = 4;
@@ -93,7 +101,7 @@
             // 
             // number5
             // 
-            this.number5.Location = new System.Drawing.Point(88, 246);
+            this.number5.Location = new System.Drawing.Point(480, 150);
             this.number5.Name = "number5";
             this.number5.Size = new System.Drawing.Size(77, 67);
             this.number5.TabIndex = 5;
@@ -103,7 +111,7 @@
             // 
             // number6
             // 
-            this.number6.Location = new System.Drawing.Point(189, 246);
+            this.number6.Location = new System.Drawing.Point(80, 250);
             this.number6.Name = "number6";
             this.number6.Size = new System.Drawing.Size(77, 67);
             this.number6.TabIndex = 6;
@@ -113,7 +121,7 @@
             // 
             // number7
             // 
-            this.number7.Location = new System.Drawing.Point(289, 246);
+            this.number7.Location = new System.Drawing.Point(180, 250);
             this.number7.Name = "number7";
             this.number7.Size = new System.Drawing.Size(77, 67);
             this.number7.TabIndex = 7;
@@ -123,7 +131,7 @@
             // 
             // number8
             // 
-            this.number8.Location = new System.Drawing.Point(398, 246);
+            this.number8.Location = new System.Drawing.Point(280, 250);
             this.number8.Name = "number8";
             this.number8.Size = new System.Drawing.Size(77, 67);
             this.number8.TabIndex = 8;
@@ -133,7 +141,7 @@
             // 
             // number9
             // 
-            this.number9.Location = new System.Drawing.Point(505, 246);
+            this.number9.Location = new System.Drawing.Point(380, 250);
             this.number9.Name = "number9";
             this.number9.Size = new System.Drawing.Size(77, 67);
             this.number9.TabIndex = 9;
@@ -143,7 +151,7 @@
             // 
             // number0
             // 
-            this.number0.Location = new System.Drawing.Point(88, 139);
+            this.number0.Location = new System.Drawing.Point(480, 250);
             this.number0.Name = "number0";
             this.number0.Size = new System.Drawing.Size(77, 67);
             this.number0.TabIndex = 10;
@@ -151,12 +159,45 @@
             this.number0.UseVisualStyleBackColor = true;
             this.number0.Click += new System.EventHandler(this.number0_Click);
             // 
+            // plus
+            // 
+            this.plus.Location = new System.Drawing.Point(580, 63);
+            this.plus.Name = "plus";
+            this.plus.Size = new System.Drawing.Size(77, 67);
+            this.plus.TabIndex = 11;
+            this.plus.Text = "+";
+            this.plus.UseVisualStyleBackColor = true;
+            this.plus.Click += new System.EventHandler(this.plus_Click);
+            // 
+            // minus
+            // 
+            this.minus.Location = new System.Drawing.Point(580, 155);
+            this.minus.Name = "minus";
+            this.minus.Size = new System.Drawing.Size(77, 67);
+            this.minus.TabIndex = 12;
+            this.minus.Text = "-";
+            this.minus.UseVisualStyleBackColor = true;
+            this.minus.Click += new System.EventHandler(this.minus_Click);
+            // 
+            // equal
+            // 
+            this.equal.Location = new System.Drawing.Point(580, 250);
+            this.equal.Name = "equal";
+            this.equal.Size = new System.Drawing.Size(77, 67);
+            this.equal.TabIndex = 13;
+            this.equal.Text = "=";
+            this.equal.UseVisualStyleBackColor = true;
+            this.equal.Click += new System.EventHandler(this.equal_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(637, 383);
+            this.ClientSize = new System.Drawing.Size(723, 383);
+            this.Controls.Add(this.equal);
+            this.Controls.Add(this.minus);
+            this.Controls.Add(this.plus);
             this.Controls.Add(this.number0);
             this.Controls.Add(this.number9);
             this.Controls.Add(this.number8);
@@ -189,6 +230,9 @@
         private System.Windows.Forms.Button number8;
         private System.Windows.Forms.Button number9;
         private System.Windows.Forms.Button number0;
+        private System.Windows.Forms.Button plus;
+        private System.Windows.Forms.Button minus;
+        private System.Windows.Forms.Button equal;
     }
 }
 

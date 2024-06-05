@@ -12,23 +12,42 @@ namespace Calculadora_Simple
 {
     public partial class Form1 : Form
     {
-        int i = 0;
+        int i = 0;              //este int lo utilizo como base en cada botón que indica un número.
+        string operation = null;  //este string sirve para detectar simbolos como el +,-,= etc.
+        int result = 0;
+        int secondary = 0;
 
         public Form1()
         {
+
             InitializeComponent();
         }
 
         private void Resultado_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void numbers()
         {
-            
             Resultado.Text += $"{i}";
         }
+
+        private void operations()
+        {
+            result = int.Parse(Resultado.Text);
+            Resultado.Text = $"{operation}";
+        }
+
+        private void equal_Click(object sender, EventArgs e)
+        {
+            operation = "=";
+
+            secondary = int.Parse(Resultado.Text);
+
+            Resultado.Text = $"{result + secondary}";
+        }
+
 
         private void number0_Click(object sender, EventArgs e)
         {
@@ -89,5 +108,19 @@ namespace Calculadora_Simple
             i = 9;
             numbers();
         }
+
+        private void plus_Click(object sender, EventArgs e)
+        {
+            operation = "+";
+            operations();
+        }
+
+        private void minus_Click(object sender, EventArgs e)
+        {
+            operation = "-";
+            operations();
+        }
+
+        
     }
 }
