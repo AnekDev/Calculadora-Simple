@@ -42,6 +42,8 @@
             this.plus = new System.Windows.Forms.Button();
             this.minus = new System.Windows.Forms.Button();
             this.equal = new System.Windows.Forms.Button();
+            this.CE = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Resultado
@@ -50,11 +52,13 @@
             this.Resultado.BackColor = System.Drawing.SystemColors.InfoText;
             this.Resultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Resultado.ForeColor = System.Drawing.SystemColors.Control;
+            this.Resultado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Resultado.Location = new System.Drawing.Point(82, 63);
             this.Resultado.Margin = new System.Windows.Forms.Padding(3);
             this.Resultado.MaximumSize = new System.Drawing.Size(475, 67);
             this.Resultado.MinimumSize = new System.Drawing.Size(475, 67);
             this.Resultado.Name = "Resultado";
+            this.Resultado.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.Resultado.Size = new System.Drawing.Size(475, 67);
             this.Resultado.TabIndex = 0;
             this.Resultado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,7 +166,7 @@
             // 
             // plus
             // 
-            this.plus.Location = new System.Drawing.Point(580, 63);
+            this.plus.Location = new System.Drawing.Point(680, 150);
             this.plus.Name = "plus";
             this.plus.Size = new System.Drawing.Size(77, 67);
             this.plus.TabIndex = 11;
@@ -184,18 +188,40 @@
             // 
             this.equal.Location = new System.Drawing.Point(580, 250);
             this.equal.Name = "equal";
-            this.equal.Size = new System.Drawing.Size(77, 67);
+            this.equal.Size = new System.Drawing.Size(177, 67);
             this.equal.TabIndex = 13;
             this.equal.Text = "=";
             this.equal.UseVisualStyleBackColor = true;
             this.equal.Click += new System.EventHandler(this.equal_Click);
+            // 
+            // CE
+            // 
+            this.CE.Location = new System.Drawing.Point(680, 63);
+            this.CE.Name = "CE";
+            this.CE.Size = new System.Drawing.Size(77, 67);
+            this.CE.TabIndex = 14;
+            this.CE.Text = "CE";
+            this.CE.UseVisualStyleBackColor = true;
+            this.CE.Click += new System.EventHandler(this.CE_Click);
+            // 
+            // delete
+            // 
+            this.delete.Location = new System.Drawing.Point(580, 63);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(77, 67);
+            this.delete.TabIndex = 15;
+            this.delete.Text = "<-";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(723, 383);
+            this.ClientSize = new System.Drawing.Size(817, 383);
+            this.Controls.Add(this.delete);
+            this.Controls.Add(this.CE);
             this.Controls.Add(this.equal);
             this.Controls.Add(this.minus);
             this.Controls.Add(this.plus);
@@ -234,6 +260,8 @@
         private System.Windows.Forms.Button plus;
         private System.Windows.Forms.Button minus;
         private System.Windows.Forms.Button equal;
+        private System.Windows.Forms.Button CE;
+        private System.Windows.Forms.Button delete;
     }
 }
 
