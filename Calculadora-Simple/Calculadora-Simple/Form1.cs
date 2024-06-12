@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calculadora_Simple
 {
     public partial class Form1 : Form
     {
-        float i = 0;              //este int lo utilizo como base en cada botón que indica un número.
+        float i = 0;              //este float lo utilizo como base en cada botón que indica un número.
         string operation = null;  //este string sirve para detectar simbolos como el +,-,= etc.
         float result = 0;
         float secondary = 0;
@@ -23,18 +16,16 @@ namespace Calculadora_Simple
         public Form1()
         {
             InitializeComponent();
-            if (operation != "+")
+            if (operation == "+")
+                complexOperation = false;
+            else if (operation == "-")
+                complexOperation = false;
+            else
                 complexOperation = true;
-            else if (operation != "-")
-                complexOperation = true;
-
-            else 
-                complexOperation = true;
-            
         }
 
         private void Resultado_Click(object sender, EventArgs e) { }
-        
+
         private void numbers()
         {
             Resultado.Text += $"{i}";
@@ -46,7 +37,7 @@ namespace Calculadora_Simple
             {
                 try
                 {
-                    result = int.Parse(Resultado.Text);
+                    result = float.Parse(Resultado.Text);  // Cambiado a float.Parse
                     Resultado.Text = $"{operation}";
                 }
                 catch { }
@@ -55,7 +46,7 @@ namespace Calculadora_Simple
             {
                 try
                 {
-                    result = int.Parse(Resultado.Text);
+                    result = float.Parse(Resultado.Text);  // Cambiado a float.Parse
                     Resultado.Text = "";
                 }
                 catch { }
@@ -63,14 +54,20 @@ namespace Calculadora_Simple
         }
 
         private void equal_Click(object sender, EventArgs e)
-                    //operation = "=";
         {
-            if (complexOperation == false)
+            if (!complexOperation)
             {
                 try
                 {
-                    secondary = int.Parse(Resultado.Text);
-                    Resultado.Text = $"{result + secondary}";
+                    secondary = float.Parse(Resultado.Text);  // Cambiado a float.Parse
+                    if (operation == "+")
+                    {
+                        Resultado.Text = $"{result + secondary}";
+                    }
+                    else if (operation == "-")
+                    {
+                        Resultado.Text = $"{result + secondary}";
+                    }
                 }
                 catch { }
             }
@@ -78,10 +75,9 @@ namespace Calculadora_Simple
             {
                 try
                 {
-                    secondary = int.Parse(Resultado.Text);
+                    secondary = float.Parse(Resultado.Text);  // Cambiado a float.Parse
                     DataTable dt = new DataTable();
-                    double answer = (double)dt.Compute($"{result}{operation}{secondary}", "");
-
+                    float answer = Convert.ToSingle(dt.Compute($"{result}{operation}{secondary}", ""));
                     Resultado.Text = $"{answer}";
                 }
                 catch { }
@@ -89,7 +85,6 @@ namespace Calculadora_Simple
         }
 
         private void button2_Click(object sender, EventArgs e)
-                    //Delete button
         {
             try
             {
@@ -108,12 +103,14 @@ namespace Calculadora_Simple
         private void multiplicado_Click(object sender, EventArgs e)
         {
             operation = "*";
+            complexOperation = true;
             operations();
         }
 
         private void dividido_Click(object sender, EventArgs e)
         {
             operation = "/";
+            complexOperation = true;
             operations();
         }
 
@@ -180,15 +177,15 @@ namespace Calculadora_Simple
         private void plus_Click(object sender, EventArgs e)
         {
             operation = "+";
+            complexOperation = false;
             operations();
         }
 
         private void minus_Click(object sender, EventArgs e)
         {
             operation = "-";
+            complexOperation = false;
             operations();
         }
-
-        
     }
 }

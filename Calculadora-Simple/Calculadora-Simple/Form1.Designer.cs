@@ -242,7 +242,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(615, 492);
+            this.ClientSize = new System.Drawing.Size(655, 492);
             this.Controls.Add(this.dividido);
             this.Controls.Add(this.multiplicado);
             this.Controls.Add(this.delete);
