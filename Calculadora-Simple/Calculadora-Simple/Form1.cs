@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,9 +18,19 @@ namespace Calculadora_Simple
         float result = 0;
         float secondary = 0;
 
+        bool complexOperation = false;
+
         public Form1()
         {
             InitializeComponent();
+            if (operation != "+")
+                complexOperation = true;
+            else if (operation != "-")
+                complexOperation = true;
+
+            else 
+                complexOperation = true;
+            
         }
 
         private void Resultado_Click(object sender, EventArgs e) { }
@@ -31,23 +42,50 @@ namespace Calculadora_Simple
 
         private void operations()
         {
-            try
+            if (!complexOperation)
             {
-                result = int.Parse(Resultado.Text);
-                Resultado.Text = $"{operation}";
+                try
+                {
+                    result = int.Parse(Resultado.Text);
+                    Resultado.Text = $"{operation}";
+                }
+                catch { }
             }
-            catch { }
+            else
+            {
+                try
+                {
+                    result = int.Parse(Resultado.Text);
+                    Resultado.Text = "";
+                }
+                catch { }
+            }
         }
 
         private void equal_Click(object sender, EventArgs e)
+                    //operation = "=";
         {
-            //operation = "=";
-            try
+            if (complexOperation == false)
             {
-                secondary = int.Parse(Resultado.Text);
-                Resultado.Text = $"{result + secondary}";
+                try
+                {
+                    secondary = int.Parse(Resultado.Text);
+                    Resultado.Text = $"{result + secondary}";
+                }
+                catch { }
             }
-            catch { }
+            else
+            {
+                try
+                {
+                    secondary = int.Parse(Resultado.Text);
+                    DataTable dt = new DataTable();
+                    double answer = (double)dt.Compute($"{result}{operation}{secondary}", "");
+
+                    Resultado.Text = $"{answer}";
+                }
+                catch { }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -65,6 +103,18 @@ namespace Calculadora_Simple
             Resultado.Text = "";
             result = 0;
             secondary = 0;
+        }
+
+        private void multiplicado_Click(object sender, EventArgs e)
+        {
+            operation = "*";
+            operations();
+        }
+
+        private void dividido_Click(object sender, EventArgs e)
+        {
+            operation = "/";
+            operations();
         }
 
         private void number0_Click(object sender, EventArgs e)
