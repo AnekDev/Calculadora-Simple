@@ -16,12 +16,6 @@ namespace Calculadora_Simple
         public Form1()
         {
             InitializeComponent();
-            if (operation == "+")
-                complexOperation = false;
-            else if (operation == "-")
-                complexOperation = false;
-            else
-                complexOperation = true;
         }
 
         private void Resultado_Click(object sender, EventArgs e) { }
@@ -38,7 +32,7 @@ namespace Calculadora_Simple
                 try
                 {
                     result = float.Parse(Resultado.Text);  // Cambiado a float.Parse
-                    Resultado.Text = $"{operation}";
+                    Resultado.Text = $"";
                 }
                 catch { }
             }
@@ -66,7 +60,7 @@ namespace Calculadora_Simple
                     }
                     else if (operation == "-")
                     {
-                        Resultado.Text = $"{result + secondary}";
+                        Resultado.Text = $"{result - secondary}";
                     }
                 }
                 catch { }
