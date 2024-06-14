@@ -12,13 +12,14 @@ namespace Calculadora_Simple
         float secondary = 0;
 
         bool complexOperation = false;
-        bool comaclik = false;
         public Form1()
         {
             InitializeComponent();
         }
 
         private void Resultado_Click(object sender, EventArgs e) { }
+
+        private void last_Click(object sender, EventArgs e) { }
 
         private void numbers()
         {
@@ -27,24 +28,13 @@ namespace Calculadora_Simple
 
         private void operations()
         {
-            if (!complexOperation)
-            {
                 try
                 {
-                    result = float.Parse(Resultado.Text);  // Cambiado a float.Parse
+                    result = float.Parse(Resultado.Text);  
                     Resultado.Text = $"";
+                    last.Text = $"{result} {operation}";
                 }
                 catch { }
-            }
-            else
-            {
-                try
-                {
-                    result = float.Parse(Resultado.Text);  // Cambiado a float.Parse
-                    Resultado.Text = "";
-                }
-                catch { }
-            }
         }
 
         private void equal_Click(object sender, EventArgs e)
@@ -81,6 +71,7 @@ namespace Calculadora_Simple
         private void CE_Click(object sender, EventArgs e)
         {
             Resultado.Text = "";
+            last.Text = "";
             result = 0;
             secondary = 0;
         }
@@ -181,6 +172,6 @@ namespace Calculadora_Simple
             operations();
         }
 
-
+        
     }
 }

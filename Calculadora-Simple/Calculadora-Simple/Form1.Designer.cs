@@ -48,6 +48,7 @@
             this.dividido = new System.Windows.Forms.Button();
             this.point = new System.Windows.Forms.Button();
             this.pi = new System.Windows.Forms.Button();
+            this.last = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Resultado
@@ -57,7 +58,7 @@
             this.Resultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Resultado.ForeColor = System.Drawing.SystemColors.Control;
             this.Resultado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Resultado.Location = new System.Drawing.Point(80, 70);
+            this.Resultado.Location = new System.Drawing.Point(81, 156);
             this.Resultado.Margin = new System.Windows.Forms.Padding(3);
             this.Resultado.MaximumSize = new System.Drawing.Size(440, 67);
             this.Resultado.MinimumSize = new System.Drawing.Size(440, 67);
@@ -71,7 +72,7 @@
             // number1
             // 
             this.number1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.number1.Location = new System.Drawing.Point(80, 150);
+            this.number1.Location = new System.Drawing.Point(81, 236);
             this.number1.Name = "number1";
             this.number1.Size = new System.Drawing.Size(77, 67);
             this.number1.TabIndex = 1;
@@ -81,7 +82,7 @@
             // 
             // number2
             // 
-            this.number2.Location = new System.Drawing.Point(170, 150);
+            this.number2.Location = new System.Drawing.Point(171, 236);
             this.number2.Name = "number2";
             this.number2.Size = new System.Drawing.Size(77, 67);
             this.number2.TabIndex = 2;
@@ -91,7 +92,7 @@
             // 
             // number3
             // 
-            this.number3.Location = new System.Drawing.Point(260, 150);
+            this.number3.Location = new System.Drawing.Point(261, 236);
             this.number3.Name = "number3";
             this.number3.Size = new System.Drawing.Size(77, 67);
             this.number3.TabIndex = 3;
@@ -101,7 +102,7 @@
             // 
             // number4
             // 
-            this.number4.Location = new System.Drawing.Point(80, 230);
+            this.number4.Location = new System.Drawing.Point(81, 316);
             this.number4.Name = "number4";
             this.number4.Size = new System.Drawing.Size(77, 67);
             this.number4.TabIndex = 4;
@@ -111,7 +112,7 @@
             // 
             // number5
             // 
-            this.number5.Location = new System.Drawing.Point(170, 230);
+            this.number5.Location = new System.Drawing.Point(171, 316);
             this.number5.Name = "number5";
             this.number5.Size = new System.Drawing.Size(77, 67);
             this.number5.TabIndex = 5;
@@ -121,7 +122,7 @@
             // 
             // number6
             // 
-            this.number6.Location = new System.Drawing.Point(260, 230);
+            this.number6.Location = new System.Drawing.Point(261, 316);
             this.number6.Name = "number6";
             this.number6.Size = new System.Drawing.Size(77, 67);
             this.number6.TabIndex = 6;
@@ -131,7 +132,7 @@
             // 
             // number7
             // 
-            this.number7.Location = new System.Drawing.Point(80, 310);
+            this.number7.Location = new System.Drawing.Point(81, 396);
             this.number7.Name = "number7";
             this.number7.Size = new System.Drawing.Size(77, 67);
             this.number7.TabIndex = 7;
@@ -141,7 +142,7 @@
             // 
             // number8
             // 
-            this.number8.Location = new System.Drawing.Point(170, 310);
+            this.number8.Location = new System.Drawing.Point(171, 396);
             this.number8.Name = "number8";
             this.number8.Size = new System.Drawing.Size(77, 67);
             this.number8.TabIndex = 8;
@@ -151,7 +152,7 @@
             // 
             // number9
             // 
-            this.number9.Location = new System.Drawing.Point(260, 310);
+            this.number9.Location = new System.Drawing.Point(261, 396);
             this.number9.Name = "number9";
             this.number9.Size = new System.Drawing.Size(77, 67);
             this.number9.TabIndex = 9;
@@ -161,7 +162,7 @@
             // 
             // number0
             // 
-            this.number0.Location = new System.Drawing.Point(80, 390);
+            this.number0.Location = new System.Drawing.Point(81, 476);
             this.number0.Name = "number0";
             this.number0.Size = new System.Drawing.Size(77, 67);
             this.number0.TabIndex = 10;
@@ -171,7 +172,7 @@
             // 
             // plus
             // 
-            this.plus.Location = new System.Drawing.Point(350, 230);
+            this.plus.Location = new System.Drawing.Point(351, 316);
             this.plus.Name = "plus";
             this.plus.Size = new System.Drawing.Size(77, 67);
             this.plus.TabIndex = 11;
@@ -181,7 +182,7 @@
             // 
             // minus
             // 
-            this.minus.Location = new System.Drawing.Point(440, 230);
+            this.minus.Location = new System.Drawing.Point(441, 316);
             this.minus.Name = "minus";
             this.minus.Size = new System.Drawing.Size(77, 67);
             this.minus.TabIndex = 12;
@@ -191,7 +192,7 @@
             // 
             // equal
             // 
-            this.equal.Location = new System.Drawing.Point(350, 390);
+            this.equal.Location = new System.Drawing.Point(351, 476);
             this.equal.Name = "equal";
             this.equal.Size = new System.Drawing.Size(167, 67);
             this.equal.TabIndex = 13;
@@ -201,7 +202,7 @@
             // 
             // CE
             // 
-            this.CE.Location = new System.Drawing.Point(350, 150);
+            this.CE.Location = new System.Drawing.Point(351, 236);
             this.CE.Name = "CE";
             this.CE.Size = new System.Drawing.Size(77, 67);
             this.CE.TabIndex = 14;
@@ -211,7 +212,7 @@
             // 
             // delete
             // 
-            this.delete.Location = new System.Drawing.Point(440, 150);
+            this.delete.Location = new System.Drawing.Point(441, 236);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(77, 67);
             this.delete.TabIndex = 15;
@@ -221,7 +222,7 @@
             // 
             // multiplicado
             // 
-            this.multiplicado.Location = new System.Drawing.Point(350, 310);
+            this.multiplicado.Location = new System.Drawing.Point(351, 396);
             this.multiplicado.Name = "multiplicado";
             this.multiplicado.Size = new System.Drawing.Size(77, 67);
             this.multiplicado.TabIndex = 16;
@@ -231,7 +232,7 @@
             // 
             // dividido
             // 
-            this.dividido.Location = new System.Drawing.Point(440, 310);
+            this.dividido.Location = new System.Drawing.Point(441, 396);
             this.dividido.Name = "dividido";
             this.dividido.Size = new System.Drawing.Size(77, 67);
             this.dividido.TabIndex = 17;
@@ -242,7 +243,7 @@
             // point
             // 
             this.point.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.point.Location = new System.Drawing.Point(170, 390);
+            this.point.Location = new System.Drawing.Point(171, 476);
             this.point.Name = "point";
             this.point.Size = new System.Drawing.Size(77, 67);
             this.point.TabIndex = 18;
@@ -253,19 +254,38 @@
             // pi
             // 
             this.pi.Font = new System.Drawing.Font("Cascadia Code", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pi.Location = new System.Drawing.Point(260, 390);
+            this.pi.Location = new System.Drawing.Point(261, 476);
             this.pi.Name = "pi";
             this.pi.Size = new System.Drawing.Size(77, 67);
             this.pi.TabIndex = 19;
             this.pi.Text = "π";
             this.pi.UseVisualStyleBackColor = true;
             // 
+            // last
+            // 
+            this.last.AutoSize = true;
+            this.last.BackColor = System.Drawing.SystemColors.InfoText;
+            this.last.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.last.ForeColor = System.Drawing.SystemColors.Control;
+            this.last.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.last.Location = new System.Drawing.Point(81, 83);
+            this.last.Margin = new System.Windows.Forms.Padding(3);
+            this.last.MaximumSize = new System.Drawing.Size(440, 67);
+            this.last.MinimumSize = new System.Drawing.Size(440, 67);
+            this.last.Name = "last";
+            this.last.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.last.Size = new System.Drawing.Size(440, 67);
+            this.last.TabIndex = 20;
+            this.last.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.last.Click += new System.EventHandler(this.last_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(613, 492);
+            this.ClientSize = new System.Drawing.Size(613, 595);
+            this.Controls.Add(this.last);
             this.Controls.Add(this.pi);
             this.Controls.Add(this.point);
             this.Controls.Add(this.dividido);
@@ -316,6 +336,7 @@
         private System.Windows.Forms.Button dividido;
         private System.Windows.Forms.Button point;
         private System.Windows.Forms.Button pi;
+        private System.Windows.Forms.Label last;
     }
 }
 
