@@ -10,8 +10,6 @@ namespace Calculadora_Simple
         string operation = null;  //este string sirve para detectar simbolos como el +,-,= etc.
         float result = 0;
         float secondary = 0;
-
-        bool complexOperation = false;
         public Form1()
         {
             InitializeComponent();
@@ -60,6 +58,7 @@ namespace Calculadora_Simple
         }
 
         private void button2_Click(object sender, EventArgs e)
+                    // Remove Button
         {
             try
             {
@@ -87,14 +86,12 @@ namespace Calculadora_Simple
         private void multiplicado_Click(object sender, EventArgs e)
         {
             operation = "*";
-            complexOperation = true;
             operations();
         }
 
         private void dividido_Click(object sender, EventArgs e)
         {
             operation = "/";
-            complexOperation = true;
             operations();
         }
 
@@ -161,14 +158,12 @@ namespace Calculadora_Simple
         private void plus_Click(object sender, EventArgs e)
         {
             operation = "+";
-            complexOperation = false;
             operations();
         }
 
         private void minus_Click(object sender, EventArgs e)
         {
             operation = "-";
-            complexOperation = false;
             operations();
         }
 
