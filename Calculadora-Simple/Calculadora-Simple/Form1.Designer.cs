@@ -46,6 +46,8 @@
             this.delete = new System.Windows.Forms.Button();
             this.multiplicado = new System.Windows.Forms.Button();
             this.dividido = new System.Windows.Forms.Button();
+            this.point = new System.Windows.Forms.Button();
+            this.pi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Resultado
@@ -189,7 +191,7 @@
             // 
             // equal
             // 
-            this.equal.Location = new System.Drawing.Point(170, 390);
+            this.equal.Location = new System.Drawing.Point(350, 390);
             this.equal.Name = "equal";
             this.equal.Size = new System.Drawing.Size(167, 67);
             this.equal.TabIndex = 13;
@@ -237,12 +239,35 @@
             this.dividido.UseVisualStyleBackColor = true;
             this.dividido.Click += new System.EventHandler(this.dividido_Click);
             // 
+            // point
+            // 
+            this.point.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.point.Location = new System.Drawing.Point(170, 390);
+            this.point.Name = "point";
+            this.point.Size = new System.Drawing.Size(77, 67);
+            this.point.TabIndex = 18;
+            this.point.Text = ",";
+            this.point.UseVisualStyleBackColor = true;
+            this.point.Click += new System.EventHandler(this.point_Click);
+            // 
+            // pi
+            // 
+            this.pi.Font = new System.Drawing.Font("Cascadia Code", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pi.Location = new System.Drawing.Point(260, 390);
+            this.pi.Name = "pi";
+            this.pi.Size = new System.Drawing.Size(77, 67);
+            this.pi.TabIndex = 19;
+            this.pi.Text = "π";
+            this.pi.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(613, 492);
+            this.Controls.Add(this.pi);
+            this.Controls.Add(this.point);
             this.Controls.Add(this.dividido);
             this.Controls.Add(this.multiplicado);
             this.Controls.Add(this.delete);
@@ -289,6 +314,8 @@
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button multiplicado;
         private System.Windows.Forms.Button dividido;
+        private System.Windows.Forms.Button point;
+        private System.Windows.Forms.Button pi;
     }
 }
 

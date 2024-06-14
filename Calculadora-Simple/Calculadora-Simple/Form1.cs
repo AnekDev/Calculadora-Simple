@@ -12,7 +12,7 @@ namespace Calculadora_Simple
         float secondary = 0;
 
         bool complexOperation = false;
-
+        bool comaclik = false;
         public Form1()
         {
             InitializeComponent();
@@ -49,33 +49,24 @@ namespace Calculadora_Simple
 
         private void equal_Click(object sender, EventArgs e)
         {
-            if (!complexOperation)
+
+            try
             {
-                try
-                {
-                    secondary = float.Parse(Resultado.Text);  // Cambiado a float.Parse
-                    if (operation == "+")
-                    {
-                        Resultado.Text = $"{result + secondary}";
-                    }
-                    else if (operation == "-")
-                    {
-                        Resultado.Text = $"{result - secondary}";
-                    }
-                }
-                catch { }
+                secondary = float.Parse(Resultado.Text);  // Cambiado a float.Parse
+                if (operation == "+")
+                    Resultado.Text = $"{result + secondary}";
+
+                else if (operation == "-")
+                    Resultado.Text = $"{result - secondary}";
+
+                else if (operation == "*")
+                    Resultado.Text = $"{result * secondary}";
+
+                else if (operation == "/")
+                    Resultado.Text = $"{result / secondary}";
+
             }
-            else
-            {
-                try
-                {
-                    secondary = float.Parse(Resultado.Text);  // Cambiado a float.Parse
-                    DataTable dt = new DataTable();
-                    float answer = Convert.ToSingle(dt.Compute($"{result}{operation}{secondary}", ""));
-                    Resultado.Text = $"{answer}";
-                }
-                catch { }
-            }
+            catch { }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -92,6 +83,14 @@ namespace Calculadora_Simple
             Resultado.Text = "";
             result = 0;
             secondary = 0;
+        }
+
+        private void point_Click(object sender, EventArgs e)
+        {
+            if (!Resultado.Text.Contains(","))
+            {
+                Resultado.Text += ",";
+            }
         }
 
         private void multiplicado_Click(object sender, EventArgs e)
@@ -181,5 +180,7 @@ namespace Calculadora_Simple
             complexOperation = false;
             operations();
         }
+
+
     }
 }
