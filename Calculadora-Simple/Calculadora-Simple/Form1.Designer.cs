@@ -253,7 +253,7 @@
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(90, 85);
             this.delete.TabIndex = 15;
-            this.delete.Text = "<-";
+            this.delete.Text = "C";
             this.delete.UseVisualStyleBackColor = false;
             this.delete.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -331,9 +331,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(207)))));
             this.label1.Location = new System.Drawing.Point(361, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 16);
+            this.label1.Size = new System.Drawing.Size(107, 16);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Anek\'s Calculator";
+            this.label1.Text = "Manel Calculator";
             // 
             // Form1
             // 

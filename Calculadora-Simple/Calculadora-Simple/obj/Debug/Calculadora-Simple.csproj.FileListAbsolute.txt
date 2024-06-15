@@ -8,3 +8,7 @@ C:\Users\Manel\Desktop\1 Proyectos\Calculadora-Simple\Calculadora-Simple\Calcula
 C:\Users\Manel\Desktop\1 Proyectos\Calculadora-Simple\Calculadora-Simple\Calculadora-Simple\obj\Debug\Calculadora-Simple.csproj.CoreCompileInputs.cache
 C:\Users\Manel\Desktop\1 Proyectos\Calculadora-Simple\Calculadora-Simple\Calculadora-Simple\obj\Debug\Calculadora-Simple.exe
 C:\Users\Manel\Desktop\1 Proyectos\Calculadora-Simple\Calculadora-Simple\Calculadora-Simple\obj\Debug\Calculadora-Simple.pdb
+C:\Users\Manel\Desktop\1 Proyectos\Calculadora-Simple\Calculadora-Simple\Calculadora-Simple\bin\Debug\Calculadora-Simple.exe.manifest
+C:\Users\Manel\Desktop\1 Proyectos\Calculadora-Simple\Calculadora-Simple\Calculadora-Simple\bin\Debug\Calculadora-Simple.application
+C:\Users\Manel\Desktop\1 Proyectos\Calculadora-Simple\Calculadora-Simple\Calculadora-Simple\obj\Debug\Calculadora-Simple.exe.manifest
+C:\Users\Manel\Desktop\1 Proyectos\Calculadora-Simple\Calculadora-Simple\Calculadora-Simple\obj\Debug\Calculadora-Simple.application
