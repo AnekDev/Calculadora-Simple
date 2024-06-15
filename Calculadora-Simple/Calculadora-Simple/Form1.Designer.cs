@@ -54,7 +54,7 @@
             // Resultado
             // 
             this.Resultado.AutoSize = true;
-            this.Resultado.BackColor = System.Drawing.SystemColors.InfoText;
+            this.Resultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(96)))), ((int)(((byte)(176)))));
             this.Resultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Resultado.ForeColor = System.Drawing.SystemColors.Control;
             this.Resultado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -71,23 +71,34 @@
             // 
             // number1
             // 
+            this.number1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(96)))), ((int)(((byte)(176)))));
             this.number1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.number1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(162)))), ((int)(((byte)(216)))));
+            this.number1.FlatAppearance.BorderSize = 3;
+            this.number1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number1.Location = new System.Drawing.Point(81, 236);
             this.number1.Name = "number1";
             this.number1.Size = new System.Drawing.Size(77, 67);
             this.number1.TabIndex = 1;
             this.number1.Text = "1";
-            this.number1.UseVisualStyleBackColor = true;
+            this.number1.UseVisualStyleBackColor = false;
             this.number1.Click += new System.EventHandler(this.number1_Click);
             // 
             // number2
             // 
+            this.number2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(162)))), ((int)(((byte)(216)))));
+            this.number2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.number2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(162)))), ((int)(((byte)(216)))));
+            this.number2.FlatAppearance.BorderSize = 3;
+            this.number2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.number2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.number2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number2.Location = new System.Drawing.Point(171, 236);
             this.number2.Name = "number2";
             this.number2.Size = new System.Drawing.Size(77, 67);
             this.number2.TabIndex = 2;
             this.number2.Text = "2";
-            this.number2.UseVisualStyleBackColor = true;
+            this.number2.UseVisualStyleBackColor = false;
             this.number2.Click += new System.EventHandler(this.number2_Click);
             // 
             // number3
@@ -260,21 +271,22 @@
             this.pi.TabIndex = 19;
             this.pi.Text = "π";
             this.pi.UseVisualStyleBackColor = true;
+            this.pi.Click += new System.EventHandler(this.pi_Click);
             // 
             // last
             // 
             this.last.AutoSize = true;
-            this.last.BackColor = System.Drawing.SystemColors.InfoText;
-            this.last.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.last.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(96)))), ((int)(((byte)(176)))));
+            this.last.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.last.ForeColor = System.Drawing.SystemColors.Control;
             this.last.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.last.Location = new System.Drawing.Point(81, 83);
+            this.last.Location = new System.Drawing.Point(81, 115);
             this.last.Margin = new System.Windows.Forms.Padding(3);
-            this.last.MaximumSize = new System.Drawing.Size(440, 67);
-            this.last.MinimumSize = new System.Drawing.Size(440, 67);
+            this.last.MaximumSize = new System.Drawing.Size(400, 33);
+            this.last.MinimumSize = new System.Drawing.Size(40, 33);
             this.last.Name = "last";
-            this.last.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.last.Size = new System.Drawing.Size(440, 67);
+            this.last.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.last.Size = new System.Drawing.Size(40, 33);
             this.last.TabIndex = 20;
             this.last.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.last.Click += new System.EventHandler(this.last_Click);
@@ -283,7 +295,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(613, 595);
             this.Controls.Add(this.last);
             this.Controls.Add(this.pi);

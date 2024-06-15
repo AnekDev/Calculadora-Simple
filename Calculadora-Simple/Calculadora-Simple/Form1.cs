@@ -6,7 +6,7 @@ namespace Calculadora_Simple
 {
     public partial class Form1 : Form
     {
-        float i = 0;              //este float lo utilizo como base en cada botón que indica un número.
+        double i = 0;              //este float lo utilizo como base en cada botón que indica un número.
         string operation = null;  //este string sirve para detectar simbolos como el +,-,= etc.
         float result = 0;
         float secondary = 0;
@@ -21,6 +21,10 @@ namespace Calculadora_Simple
 
         private void numbers()
         {
+            if (Resultado.Text == "0")
+            {
+                Resultado.Text = "";
+            }
             Resultado.Text += $"{i}";
         }
 
@@ -37,7 +41,6 @@ namespace Calculadora_Simple
 
         private void equal_Click(object sender, EventArgs e)
         {
-
             try
             {
                 secondary = float.Parse(Resultado.Text);  // Cambiado a float.Parse
@@ -52,7 +55,6 @@ namespace Calculadora_Simple
 
                 else if (operation == "/")
                     Resultado.Text = $"{result / secondary}";
-
             }
             catch { }
         }
@@ -167,6 +169,10 @@ namespace Calculadora_Simple
             operations();
         }
 
-        
+        private void pi_Click(object sender, EventArgs e)
+        {
+            i = Math.PI;
+            numbers();
+        }
     }
 }
