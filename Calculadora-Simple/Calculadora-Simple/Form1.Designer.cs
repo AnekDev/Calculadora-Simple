@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Resultado = new System.Windows.Forms.Label();
             this.number1 = new System.Windows.Forms.Button();
             this.number2 = new System.Windows.Forms.Button();
@@ -363,6 +364,7 @@
             this.Controls.Add(this.number1);
             this.Controls.Add(this.Resultado);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "CalculadoraSimple";
             this.Load += new System.EventHandler(this.Form1_Load);
