@@ -174,5 +174,10 @@ namespace Calculadora_Simple
             i = Math.PI;
             numbers();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
