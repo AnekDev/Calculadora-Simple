@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Calculadora-Simple.exe" size="150472">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Calculadora-Simple.exe" size="149504">
       <assemblyIdentity name="Calculadora-Simple" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OeI+GsB4MH9v74T2kRzUUkBfLqVOoavONleBivVRq0c=</dsig:DigestValue>
+        <dsig:DigestValue>0zJa/wEGNnctqWSqKYWnjYulLlV56L9i2KuTfIjEtHk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
